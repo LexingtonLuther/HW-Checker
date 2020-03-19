@@ -17,17 +17,30 @@ function onChange(evt) {
   let response = $(this).val();
   
   console.log(md5(response));
-  if (correct == response || correct2 == response) {
+  if ((correct == response) || (correct2 == response)) {
     happy.play();
     $(this)
       .removeClass("incorrect")
       .addClass("correct");
     let theScore = Number($("#score").text());
-    theScore = theScore + 1;
+    theScore += 12.5;
     $("#score").text(theScore);
+  } else if (response == "") {
+    let theScore = Number($("#score").text());
+    if (theScore > 0) {
+      theScore -= 12.5;
+      $("#score").text(theScore);
+    }
+    $(this)
+      .removeClass("correct");
   } else {
     if (Math.random() > 0.1) {
       sad.play();
+    }
+    let theScore = Number($("#score").text());
+    if (theScore > 0) {
+      theScore -= 12.5;
+      $("#score").text(theScore);
     }
     $(this)
       .removeClass("correct")
