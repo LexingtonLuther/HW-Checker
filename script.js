@@ -32,13 +32,13 @@ function onChange(evt) {
       $("#score").text(theScore);
     }
     $(this)
-      .removeClass("correct");
+      .removeClass("correct")
   } else {
     if (Math.random() > 0.1) {
       sad.play();
     }
     let theScore = Number($("#score").text());
-    if (theScore > 0) {
+    if (theScore > 0 & $(this).hasClass("correct")) {
       theScore -= 12.5;
       $("#score").text(theScore);
     }
