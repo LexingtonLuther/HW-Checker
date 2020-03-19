@@ -13,3 +13,15 @@ body{
 audio {
   display: none;
 }
+ol {
+  padding: 20px;
+  background: #cce5ff;
+  border-radius: 15px;
+  width: 200px;
+}
+li {
+  padding: 10px;
+}
+input {
+  padding: 0px;
+}
