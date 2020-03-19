@@ -13,10 +13,11 @@ $("input").change(onChange);
 
 function onChange(evt) {
   let correct = $(this).data("correct");
+  let correct2 = $(this).data("correct2");
   let response = $(this).val();
   
   console.log(md5(response));
-  if (correct == response) {
+  if (correct == response || correct2 == response) {
     happy.play();
     $(this)
       .removeClass("incorrect")
