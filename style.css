@@ -1,0 +1,15 @@
+.correct{
+  background:lime;
+}
+
+.incorrect{
+  background:red;
+}
+
+body{
+  background:lightgrey;
+  font-family: "Times New Roman", Times, serif;
+}
+audio {
+  display: none;
+}
